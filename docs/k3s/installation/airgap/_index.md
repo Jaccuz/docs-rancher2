@@ -35,6 +35,11 @@ keywords:
 
 如果你还没有建立私有的 Docker 镜像仓库，请参考[Docker 官方文档](https://docs.docker.com/registry/deploying/#run-an-externally-accessible-registry)建立私有的 Docker 镜像仓库。
 
+需要安装以下依赖包，否则会有报错。
+   ```shell
+   yum install -y container-selinux selinux-policy-base
+   yum install -y https://rpm.rancher.io/k3s/stable/common/centos/7/noarch/k3s-selinux-0.2-1.el7_8.noarch.rpm
+   ```    
 ### 创建镜像仓库 YAML
 
 请按照[私有镜像仓库配置指南](/docs/k3s/installation/private-registry/_index) 创建并配置`registry.yaml`文件。
